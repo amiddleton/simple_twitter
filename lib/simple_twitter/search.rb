@@ -1,8 +1,8 @@
 module SimpleTwitter
-  class Serach
+  class Search
 
     TWITTER_SEARCH = "http://search.twitter.com/search.json"
-    attr_accessor (':per_page')
+    attr_accessor (:per_page)
     def  initialize
       @per_page = 10
     end
