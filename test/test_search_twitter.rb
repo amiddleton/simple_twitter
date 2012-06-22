@@ -2,6 +2,7 @@ require('test/unit')
 require('mocha')
 require('httparty')
 require('simple_twitter.rb')
+puts("Now in: " + __FILE__)
 
 class TestSearchTwitter < Test::Unit::TestCase
   def test_search_twitter

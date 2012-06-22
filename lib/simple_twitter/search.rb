@@ -1,5 +1,6 @@
 module SimpleTwitter
   class Search
+    #puts("Now in: " +__FILE__)
 
     TWITTER_SEARCH = "http://search.twitter.com/search.json"
     attr_accessor (:per_page)
@@ -11,6 +12,7 @@ module SimpleTwitter
       params = {
         :q => query,
         :rpp => @per_page,
+        :lang => language,
       }
       response = HTTParty.get(TWITTER_SEARCH, :query => params)
       JSON.parse(response.body)
