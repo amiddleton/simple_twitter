@@ -12,7 +12,7 @@ module SimpleTwitter
       params = {
         :q => query,
         :rpp => @results_per_page,
-        :lang => language,
+        #:lang => language,
       }
       response = HTTParty.get(TWITTER_SEARCH, :query => params)
       JSON.parse(response.body)
