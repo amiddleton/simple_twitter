@@ -13,7 +13,7 @@ class TestSearchTwitter < Test::Unit::TestCase
     #assert_equal(response, HTTParty.get('http://search.twitter.com/search.json?q=(gaga&rpp=1'))
 
     tweets = s.search("gaga")
-    assert(tweets.is_a?(Hash))
-    assert(tweets.has_key?('results'))
+    assert(tweets.is_a?(Array))
+    assert(tweets.all? {|t| t.is_a?(SimpleTwitter::Tweet)})
   end
 end
